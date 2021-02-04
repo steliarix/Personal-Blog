@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    News - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+
+        <div class="news">
+
+            <div class="reg">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'account_logout' %}">Выход</a>
+                {% else %}
+                    <a href="{% url 'account_login' %}">Вход</a>
+                    <a href="{% url 'account_signup' %}">Регистрация</a>
+                {% endif %}
+            </div>
+
+            <div class="create_btn">
+                {% if user.is_authenticated %}
+                    <button class="btn btn-primary mb-5"><a href="{% url 'post_create_url' %}" class="">Create</a></button>
+                {% endif %}
+            </div>
+
+            <h3 class="mt-5">Posts:</h3>
+
+            <div class="name_news">
+                <h6 class="mt-1"><a href="{% url 'tags_list_url' %}">Tags</a></h6>
+
+            </div>
+
+            {% for post in posts %}
+                {% include 'news/includes/post_card_template.html' %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock %}

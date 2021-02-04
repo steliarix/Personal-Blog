@@ -1,0 +1,236 @@
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px deeppink;
+}
+
+body {
+    background-color: black;
+    font-family: Montserrat;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 14px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.logo_title {
+    color: white;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding-right: 40px;
+    font-size: 15px;
+}
+
+.nav {
+    background-color: black;
+
+}
+
+.nav a {
+    color: white;
+}
+
+.nav a:hover {
+    color: deeppink;
+    transition: 0.2s;
+}
+
+a {
+    color: black;
+    margin-bottom: auto;
+    margin-top: auto;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.main-screen {
+    background-color: black;
+    width: 100%;
+    height: 90vh;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+.main-screen h1 {
+    font-size: 60px;
+
+}
+
+.main_about {
+    background-color: white;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.main_about h1 {
+    font-size: 50px;
+}
+
+.main_about p {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.aboutme, .contacts {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contacts h1, .aboutme h1 {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+
+.program {
+    background-color: white;
+    width: 100%;
+    height: 2000px;
+
+}
+
+.menu_program {
+    padding: 18px;
+    text-align: center;
+    float: left;
+    background: #CECECE;
+    width: 10%;
+    height: 2000px;
+    color: #CECECE;
+
+
+}
+
+.menu_program a {
+    white-space: nowrap;
+    color: black;
+    font-size: 18px;
+    font-family: "Montserrat SemiBold";
+
+}
+
+.menu_program a:hover {
+    text-decoration: None;
+    transition: 0.2s;
+    text-shadow: 1px 1px 18px rgba(0, 0, 0, 0.6);
+
+}
+
+
+.clicker {
+    float: right;
+    background-color: white;
+    width: 90%;
+    height: 100vh;
+    padding: 20px;
+
+}
+
+
+.news {
+    float: right;
+    background-color: white;
+    width: 90%;
+    height: 100vh;
+    padding-top: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.reg, .name_news {
+    text-align: center;
+}
+
+.reg a {
+    text-decoration: none;
+}
+
+.create_form, .update_form, .delete_form, .post_detail, .tag_detail, .tags_list {
+    padding-top: 20px;
+}
+
+.tags_list a {
+    text-decoration: none;
+}
+
+
+.delete_form a {
+    text-decoration: none;
+    color: white;
+}
+
+.delete_form a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-danger a, .btn-primary a {
+    text-decoration: none;
+}
+
+.btn-danger a:hover, .btn-primary a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.create_btn {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.name_news h6 {
+    padding-bottom: 20px;
+}
+
+.news a {
+    color: black;
+    padding: 5px;
+}
+
+.box_clicker {
+    width: 10em;
+    height: 10em;
+    border: 8px solid black;
+    border-radius: 50%;
+    line-height: 10em; /* подробнее про line-height */
+    text-align: center; /* выравнять текст по середине по горизонтали */
+    background: white;
+}
+
+#reset{
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+
+

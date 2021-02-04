@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete Post "{{ tag.title|title }}" - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-md-2">
+                    <div class="delete_form">
+                        <form action="{% url 'post_delete_url' slug=post.slug %}" method="post">
+                            {% csrf_token %}
+
+                                <h3>Sure?</h3>
+                                <button class="btn btn-info"><a href="{{ post.get_absolute_url }}">Cancel</a></button>
+                                <button class="btn btn-danger" type="submit">Delete</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

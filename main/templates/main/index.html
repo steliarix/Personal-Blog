@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Main page - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <style>
+
+
+    </style>
+    <div id="container">
+        <div class="main-screen">
+            <div id="message">
+
+                <h1 class="glitch">My personal website</h1>
+
+                <h5 class="glitch">This website created for publish my pet projects</h5>
+            </div>
+        </div>
+
+        <div class="main_about">
+            <h1>About me</h1>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ducimus eum expedita itaque magni odit quia quibusdam repellat suscipit velit. Consequuntur delectus eum fuga laudantium modi omnis sed vel voluptatum!</span><span>Animi deserunt enim exercitationem qui similique. A beatae culpa cupiditate delectus deserunt dolorem ducimus earum eos est, hic inventore neque nobis odit possimus quaerat quas quod recusandae similique, sint totam!</span><span>Aspernatur consectetur distinctio dolore fugiat impedit ipsa ipsam natus necessitatibus, nemo nesciunt perspiciatis quam quis ratione ut vel veniam veritatis. Asperiores autem expedita incidunt inventore nihil porro rerum saepe vel?</span><span>A accusamus adipisci aliquam delectus deleniti enim, eveniet excepturi fuga illum nesciunt quam quas reprehenderit rerum sapiente, voluptas. Ab cum ducimus eaque exercitationem illo ipsam quod, suscipit ut vel voluptas.</span><span>Earum, impedit laudantium non ratione sed ullam! Ab aperiam asperiores dignissimos doloribus, dolorum ducimus eveniet fuga harum laboriosam minima mollitia necessitatibus nostrum odio odit praesentium quod repellendus sapiente. Ex, omnis!</span><span>Adipisci, aperiam aspernatur aut debitis deleniti dicta dolores eligendi expedita, fugiat illum impedit inventore itaque iusto laboriosam, maiores provident recusandae rem unde voluptatem voluptatum. Dolorem non quam repudiandae sapiente. Quam.</span>
+            </p>
+            <button class="btn btn-primary"><a href="{% url 'about_me_page' %}">About me</a></button>
+        </div>
+
+        <footer>
+            <p>Design created through figma by me</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+{% endblock %}

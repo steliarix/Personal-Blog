@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete Tag "{{ tag.title|title }}" - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-md-2">
+
+                    <div class="delete_form">
+                        <form action="{% url 'tag_delete_url' slug=tag.slug %}" method="post">
+                            {% csrf_token %}
+
+                            <h3>Sure?</h3>
+                            <a href="{{ tag.get_absolute_url }}">Cancel</a>
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

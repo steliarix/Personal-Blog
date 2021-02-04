@@ -1,0 +1,17 @@
+{% extends 'programs/programs.html' %}
+
+{% block title %}
+    Clicker - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+    </div>
+{% endblock %}

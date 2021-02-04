@@ -1,0 +1,47 @@
+{% extends 'programs/programs.html' %}
+
+{% block title %}
+    Clicker - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+        <div class="news">
+            <div class="clicker">
+                <div class="box_clicker" id="click"></div>
+
+                <p class="box_clicker_score" id="score">Score: 0</p>
+                <p class="box_clicker_score box_clicker_last_score"></p>
+                <button type="button" class="btn btn-primary" id="reset">Reset</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var score = document.getElementById('score')
+        var button = document.getElementById('click'),
+
+            count = 0;
+
+        button.onclick = function () {
+            count += 1;
+            score.textContent = "Score: " + count;
+        };
+        var reset =
+            document.getElementById('reset')
+        reset.onclick = function () {
+            count = 0;
+            score.textContent = "Score: " + count;
+        };
+
+    </script>
+{% endblock %}

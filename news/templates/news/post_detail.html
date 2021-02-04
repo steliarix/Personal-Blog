@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <div class="program">
+        <div class="menu_program">
+            <a href="{% url 'news' %}">Site for posts</a><br>
+            <a href="{% url 'clicker' %}">Clicker</a><br>
+            <a href="{% url 'weather' %}">Weather</a><br>
+            <a href="{% url 'todo' %}">To-do</a><br>
+            <a href="{% url 'notes' %}">Notes</a><br>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-md-2">
+
+                    <div class="post_detail">
+                        <h1 class="mt-5">{{ post.title }}</h1>
+
+                        <p class="overflow-x:hidden">{{ post.body }}</p>
+
+                        {% if user.is_authenticated %}
+                            <a href="{{ admin_object.get_update_url }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ admin_object.get_delete_url }}" class="btn btn-danger">Delete</a>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
